@@ -1,4 +1,4 @@
-![](..//Docs/media/CabeceraDocumentosMD.png)
+![](./CabeceraDocumentosMD.png)
 
 ## Acerca de OAI PMH XML
 [<img align="right" width="100px" src="https://dotnetfoundation.org/img/logo_big.svg" />](https://dotnetfoundation.org/projects?searchquery=IdentityServer&type=project)
