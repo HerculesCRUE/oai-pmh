@@ -1,4 +1,4 @@
-![](./Docs/media/CabeceraDocumentosMD.png)
+![](./CabeceraDocumentosMD.png)
 
 ## Configuración e instalación
 
