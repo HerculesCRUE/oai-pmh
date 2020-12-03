@@ -5,13 +5,16 @@
 
 Accesible en pruebas en esta dirección a través de swagger: http://herc-as-front-desa.atica.um.es/oai-pmh-xml/swagger/index.html.
 
-OAI PMH XML es un servicio web basado en OAI-PMH ([https://www.openarchives.org/OAI/openarchivesprotocol.html](https://www.openarchives.org/OAI/openarchivesprotocol.html)) que sirve XML ubicados dentro del propio servicio. Este servicio funciona como un mock-up, devuleve todos los registros con la fecha actual e ignora los parámetros from, until y resumptionToken. EN lugar de ello cuando se le solicitan identificadores o records siempre deuelve el 50% de los que tiene de forma aleatoria.
+OAI PMH XML es un servicio web basado en OAI-PMH ([https://www.openarchives.org/OAI/openarchivesprotocol.html](https://www.openarchives.org/OAI/openarchivesprotocol.html)) que sirve XML ubicados dentro del propio servicio. Este servicio funciona como un mock-up, devuleve todos los registros con la fecha actual e ignora los parámetros from, until y resumptionToken. En lugar de ello cuando se le solicitan identificadores o records siempre deuelve el 50% de los que tiene de forma aleatoria. El metadataprefix que hay que enviar para obtener los xml es 'XML'
+
+## Fichero
+En el fichero [XMLs.zip] (https://github.com/HerculesCRUE/oai-pmh/blob/master/XMLs.zip) se encuentra un set de pruebas de ficheros XML para devolver por el servicio OAI PMH XML, para el funcionamiento del servicio deben descomprimirse dentro del servicio en la carpeta XML.
 
 ## Ficheros XSD
-En la carpeta [XSD](https://github.com/HerculesCRUE/oai-pmh/blob/master/XSD) se encuentran los xsd que deben cuim
+En la carpeta [XSD](https://github.com/HerculesCRUE/oai-pmh/blob/master/XSD) se encuentran los esquemas xsd que deben cumplir los XML que devolverá el servicio.
 
 ## Configuración del repositorio de XML del servicio
-Los XML que sirve el servicio se tienen que ubicar dentro de la carpeta XML, dentro de esta carpeta se crearán N carpetas que representarán los setspec y dentro de cada carpeta setspec se ubicarán los ficheros XML, el nombre de cada uno de ellos se utilizará como identificador seguido por el nombre de setspec.
+Los XML que sirve el servicio se tienen que ubicar dentro de la carpeta XML, dentro de esta carpeta se crearán N carpetas que representarán los setspec y dentro de cada carpeta setspec se ubicarán los ficheros XML, el nombre de cada uno de ellos se utilizará como identificador precedido por el nombre de setspec.
 
 ## Configuración en el appsettings.json
     {
