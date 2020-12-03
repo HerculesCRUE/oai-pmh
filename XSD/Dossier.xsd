@@ -1,0 +1,38 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name = "Dossier">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="id" type="xsd:string" minOccurs="0"/>				
+				<xsd:element name="titulo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="identificador" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="descripcion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="seRelacionaContratoProyecto" type="xsd:string" minOccurs="0">
+					<xsd:complexType>	
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="seRelacionaConReporte" type="xsd:string" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="seRelacionaConProyecto" type="xsd:string" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="intervaloFecha" type="xsd:dateTime" minOccurs="0"/>			
+				<xsd:element name="oclnum" type="xsd:string" minOccurs="0"/>	
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

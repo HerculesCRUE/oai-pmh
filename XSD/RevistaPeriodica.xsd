@@ -1,0 +1,20 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name = "RevistaPeriodica">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="id" type="xsd:string" minOccurs="0"/>				
+				<xsd:element name="issn" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="eissn" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="publicador" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="name" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>			
+				<xsd:element name="oclnum" type="xsd:string" minOccurs="0"/>				
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

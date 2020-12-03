@@ -1,0 +1,231 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name = "GrupoDeInvestigacion">
+		<xsd:complexType>
+			<xsd:all>				
+				<xsd:element name="id" type="xsd:string" minOccurs="0"/>	
+				<xsd:element name="selloDeExcelencia" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element name="relacionadoConRelacion" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>				
+				<!-- Propiedad repetida dos veces en la Ontología -->
+				<xsd:element name="palabraClave" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="organicacionSucesora" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="identificador" type="xsd:string"  minOccurs="0"/>
+				<xsd:element name="participaEnActividad" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="intervaloFechaTiempo" type="xsd:dateTime" minOccurs="0"/>
+				<xsd:element name="contieneOrganizacion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="abreviatura" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="titulo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="tieneRol" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="descripcion" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="dedicacion" type="xsd:string" minOccurs="0"/>
+							<!-- Ontología será un elemento SKOS -->
+							<xsd:element name="tieneAreaConocimiento" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="relacionadoConProyecto" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="relacionadoConRelacion" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>							
+							<xsd:element name="intervaloDeTiempo" type="xsd:dateTime" minOccurs="0"/>
+							<xsd:element name="heredaEnPersona" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="tieneInfrastructuraReservable" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<!-- En la ontología aparece como owl:Thing -->
+				<xsd:element name="paginaWeb" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="descripcion" type="xsd:string" minOccurs="0"/>
+				<!-- En la ontología no existen las propiedades, en PDF sí -->
+				<xsd:element name="localizadoEn" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="geonamesID" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="codigoPais" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="popularidad" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="claseCaracteristica" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="codigoCaracteristica" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="parentAMD1" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="parentAMD2" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="parentAMD3" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="parentAMD4" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="tieneAcreditacion" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="titulo" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="descripcion" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="tituloPersonal" type="xsd:string"  minOccurs="0"/>
+							<!-- Ontologías: owl:Thing -->
+							<xsd:element name="tieneMateria" type="xsd:string" minOccurs="0"/> 
+							<xsd:element name="fechaPublicacion" type="xsd:dateTime" minOccurs="0"/>
+							<xsd:element name="autoridadGobernante" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<!-- Aparecen en el PDF, pero NO en las Ontologías -->
+							<xsd:element name="acreditadoPorOrganizacion" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="acreditadoPorPersona" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="emitidoPor" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="proveeServicio" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="titulo" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="produceReporte" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="identificador" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="descripcion" type="xsd:string"  minOccurs="0"/>
+							<xsd:element name="provistoPorOrganizacion" minOccurs="0"> 
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<!-- Ontología: skos:Concept // En Ontología/PDF no se detallan las propiedades -->
+				<xsd:element name="tieneAreaDeConocimiento" type="xsd:string" minOccurs="0"/> 
+				<xsd:element name="tieneInformacionContactoOrganizacion" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="tituloPersonal" type="xsd:string"  minOccurs="0"/> 
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

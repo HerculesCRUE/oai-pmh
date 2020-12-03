@@ -1,0 +1,11 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name = "GradoAcademico">
+		<xsd:complexType>
+			<xsd:ALL>
+				<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="titulo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="abreviatura" type="xsd:string" minOccurs="0"/>
+			</xsd:ALL>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

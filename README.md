@@ -7,6 +7,9 @@ Accesible en pruebas en esta dirección a través de swagger: http://herc-as-fro
 
 OAI PMH XML es un servicio web basado en OAI-PMH ([https://www.openarchives.org/OAI/openarchivesprotocol.html](https://www.openarchives.org/OAI/openarchivesprotocol.html)) que sirve XML ubicados dentro del propio servicio. Este servicio funciona como un mock-up, devuleve todos los registros con la fecha actual e ignora los parámetros from, until y resumptionToken. EN lugar de ello cuando se le solicitan identificadores o records siempre deuelve el 50% de los que tiene de forma aleatoria.
 
+## Ficheros XSD
+En la carpeta [XSD](https://github.com/HerculesCRUE/oai-pmh/blob/master/XSD) se encuentran los xsd que deben cuim
+
 ## Configuración del repositorio de XML del servicio
 Los XML que sirve el servicio se tienen que ubicar dentro de la carpeta XML, dentro de esta carpeta se crearán N carpetas que representarán los setspec y dentro de cada carpeta setspec se ubicarán los ficheros XML, el nombre de cada uno de ellos se utilizará como identificador seguido por el nombre de setspec.
 
@@ -41,3 +44,7 @@ Los XML que sirve el servicio se tienen que ubicar dentro de la carpeta XML, den
 - **System.ServiceModel.Http**: versión 4.4.*
 - **System.ServiceModel.NetTcp**: versión 4.4.*
 - **System.ServiceModel.Security**: versión 4.4.*
+
+### Configuración e instalación
+
+Las [instrucciones de configuración e instalación](https://github.com/HerculesCRUE/oai-pmh/blob/master/Configuraci%C3%B3n%20e%20Instalaci%C3%B3n.md) son el punto de partida para comenzar a usar los desarrollos de Hércules ASIO

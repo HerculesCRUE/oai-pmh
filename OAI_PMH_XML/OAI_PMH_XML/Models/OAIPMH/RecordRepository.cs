@@ -35,8 +35,8 @@ namespace OaiPmhNet.Models.OAIPMH
         /// <returns></returns>
         public Record GetRecord(string identifier, string metadataPrefix)
         {
-            string xmlRoute = "XML\\" + identifier.Substring(0, identifier.IndexOf("_"))
-                + "\\" + identifier.Substring(identifier.IndexOf("_") + 1) + ".xml";
+            string xmlRoute = "XML"+ Path.DirectorySeparatorChar + identifier.Substring(0, identifier.IndexOf("_"))
+                + Path.DirectorySeparatorChar + identifier.Substring(identifier.IndexOf("_") + 1) + ".xml";
             if (File.Exists(xmlRoute))
             {
                 Record rec = ToRecord(GetXML(xmlRoute), metadataPrefix);
@@ -187,7 +187,7 @@ namespace OaiPmhNet.Models.OAIPMH
             }
             else
             {
-                DirectoryInfo di = new DirectoryInfo(@"XML\" + set);
+                DirectoryInfo di = new DirectoryInfo(@"XML"+ Path.DirectorySeparatorChar + set);
                 if (di.Exists)
                 {
                     foreach (var fi in di.GetFiles())
@@ -207,7 +207,7 @@ namespace OaiPmhNet.Models.OAIPMH
         /// <returns></returns>
         private XML GetXML(string pRoute)
         {
-            string[] routeSplit = pRoute.Split(new string[] { "\\", "." }, StringSplitOptions.RemoveEmptyEntries);
+            string[] routeSplit = pRoute.Split(new string[] { Path.DirectorySeparatorChar.ToString(), "." }, StringSplitOptions.RemoveEmptyEntries);
             string set = routeSplit[routeSplit.Length - 3];
             string id = set + "_" + routeSplit[routeSplit.Length - 2];
             string xml = XElement.Load(pRoute).ToString();

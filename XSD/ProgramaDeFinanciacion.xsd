@@ -1,0 +1,85 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name = "ProgramaDeFinanciacion">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="titulo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="identificador" type="xsd:string"  minOccurs="0"/>
+				<xsd:element name="descripcion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="contieneProgramaDeFinanciacion" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="relacionadoConDossier" minOccurs="0"> 									
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="promocionadoPorOrganizacionFinanciera" minOccurs="0">				
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>		
+				</xsd:element>
+				<xsd:element name="localizadoEn" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="intervaloDeTiempo" type="xsd:dateTime" minOccurs="0"/>
+				<xsd:element name="tieneProgramaDeClasificacion" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<!-- Aparece en PDF, pero no en Ontologías -->
+				<xsd:element name="tieneParteDeProgramaDeFinanciacion" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="promovidoPorFuenteDeFinanciacion" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="promovidoPorFuenteDeOrganizacion" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="fondosDeProgramaDeFinanciacion" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,84 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name = "Factura">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+				<!-- Ontología será un elemento SKOS -->
+				<xsd:element name="tieneAreaConocimiento" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="autorCorrespondido" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="producidoPorProyecto" minOccurs="0">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="iccn" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="isbn" type="xsd:string"  minOccurs="0"/>
+				<xsd:element name="publicador" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="edicion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="sitioDePublicacion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="doi" type="xsd:string"  minOccurs="0"/>				
+				<xsd:element name="fecha" type="xsd:dateTime"  minOccurs="0"/>
+				<xsd:element name="paginaInicio" type="xsd:int"  minOccurs="0"/>
+				<xsd:element name="paginaFinal" type="xsd:int"  minOccurs="0"/>
+				<xsd:element name="resumen" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="listaDeAutores" minOccurs="0">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:element name="Autor" minOccurs="0">
+								<xsd:complexType>
+									<xsd:all>
+										<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+										<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+									</xsd:all>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="autorCorrespondiente" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="titulo" type="xsd:string"  minOccurs="0"/>
+				<xsd:element name="palabraClave" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="tieneLibroDePublicacion" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="tieneColeccionDePublicacion" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
