@@ -50,4 +50,4 @@ Los XML que sirve el servicio se tienen que ubicar dentro de la carpeta XML, den
 
 ### Configuración e instalación
 
-Las [instrucciones de configuración e instalación](https://github.com/HerculesCRUE/oai-pmh/blob/master/Configuraci%C3%B3n%20e%20Instalaci%C3%B3n.md) son el punto de partida para comenzar a usar los desarrollos de Hércules ASIO
+Las [instrucciones de configuración e instalación](https://github.com/HerculesCRUE/oai-pmh/blob/master/Docs/Configuraci%C3%B3n%20e%20Instalaci%C3%B3n.md) son el punto de partida para comenzar a usar los desarrollos de Hércules ASIO
