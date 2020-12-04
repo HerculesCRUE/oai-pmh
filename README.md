@@ -5,7 +5,7 @@
 
 Accesible en pruebas en esta dirección a través de swagger: http://herc-as-front-desa.atica.um.es/oai-pmh-xml/swagger/index.html.
 
-OAI PMH XML es un servicio web basado en OAI-PMH ([https://www.openarchives.org/OAI/openarchivesprotocol.html](https://www.openarchives.org/OAI/openarchivesprotocol.html)) que sirve XML ubicados dentro del propio servicio. Este servicio funciona como un mock-up, devuleve todos los registros con la fecha actual e ignora los parámetros from, until y resumptionToken. En lugar de ello cuando se le solicitan identificadores o records siempre deuelve el 50% de los que tiene de forma aleatoria. El metadataprefix que hay que enviar para obtener los xml es 'XML'
+OAI PMH XML es un servicio web basado en OAI-PMH ([https://www.openarchives.org/OAI/openarchivesprotocol.html](https://www.openarchives.org/OAI/openarchivesprotocol.html)) que sirve XML ubicados dentro del propio servicio. La versión actual de este servicio funciona como un mock-up, devolviendo todos los registros con la fecha actual e ignorando los parámetros from, until y resumptionToken. En lugar de ello, cuando se le solicitan identificadores o registros siempre devuelve la mitad aproximada de los que tiene, de forma aleatoria. El metadataprefix que hay que enviar para obtener los xml es 'XML'.
 
 ## Fichero XMLs.zip
 En el fichero [XMLs.zip](https://github.com/HerculesCRUE/oai-pmh/blob/master/XMLs.zip) se encuentra un set de pruebas de ficheros XML para devolver por el servicio OAI PMH XML, para el funcionamiento del servicio deben descomprimirse dentro del servicio en la carpeta XML.
