@@ -2,13 +2,12 @@
 
 ## Configuración e instalación
 
-Despliegue del oaipmhxml
+OAI PMH XML es un servicio web basado en OAI-PMH ([https://www.openarchives.org/OAI/openarchivesprotocol.html](https://www.openarchives.org/OAI/openarchivesprotocol.html)) que sirve XML ubicados dentro del propio servicio. Este servicio funciona como un mock-up, devuleve todos los registros con la fecha actual e ignora los parámetros from, until y resumptionToken. En lugar de ello cuando se le solicitan identificadores o records siempre deuelve el 50% de los que tiene de forma aleatoria.
+
+Despliegue del servicio oaipmhxml
 --------------------
 
 Requisitos previos: docker + docker-compose
-
-
-OAI PMH XML es un servicio web basado en OAI-PMH ([https://www.openarchives.org/OAI/openarchivesprotocol.html](https://www.openarchives.org/OAI/openarchivesprotocol.html)) que sirve XML ubicados dentro del propio servicio. Este servicio funciona como un mock-up, devuleve todos los registros con la fecha actual e ignora los parámetros from, until y resumptionToken. En lugar de ello cuando se le solicitan identificadores o records siempre deuelve el 50% de los que tiene de forma aleatoria.
 
 Para poder ejecutarlo debemos seguir el siguiente proceso (p.e. desde una ruta como /home/*usuario*/):
 
