@@ -14,7 +14,7 @@ En el fichero [XMLs.zip](https://github.com/HerculesCRUE/oai-pmh/blob/master/XML
 En la carpeta [XSD](https://github.com/HerculesCRUE/oai-pmh/blob/master/XSD) se encuentran los esquemas xsd que deben cumplir los XML que devolverá el servicio.
 
 ## Configuración del repositorio de XML del servicio
-Los XML que sirve el servicio se tienen que ubicar dentro de la carpeta XML, dentro de esta carpeta se crearán N carpetas que representarán los setspec y dentro de cada carpeta setspec se ubicarán los ficheros XML, el nombre de cada uno de ellos se utilizará como identificador precedido por el nombre de setspec.
+Los XML que sirve el servicio se tienen que ubicar dentro de la carpeta XML, dentro de esta carpeta se crearán N carpetas que representarán los [setspec](https://www.openarchives.org/OAI/openarchivesprotocol.html#Set) y dentro de cada carpeta setspec se ubicarán los ficheros XML, el nombre de cada uno de ellos se utilizará como identificador precedido por el nombre de setspec.
 
 ## Configuración en el appsettings.json
     {
