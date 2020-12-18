@@ -1,5 +1,5 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:element name = "Seminario">
+	<xsd:element name = "DisseminationEvent">
 		<xsd:complexType>
 			<xsd:all>				
 				<xsd:element name="id" type="xsd:string" minOccurs="0"/>				

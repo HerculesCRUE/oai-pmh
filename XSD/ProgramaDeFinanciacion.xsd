@@ -22,7 +22,7 @@
 						</xsd:all>
 					</xsd:complexType>
 				</xsd:element>
-				<xsd:element name="promocionadoPorOrganizacionFinanciera" minOccurs="0">				
+				<xsd:element name="promocionadoPorOrganizacionFinanciera" minOccurs="1">				
 					<xsd:complexType>
 						<xsd:all>
 							<xsd:element name="id" type="xsd:string" minOccurs="0"/>

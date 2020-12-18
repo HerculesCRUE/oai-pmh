@@ -5,15 +5,23 @@
 				<xsd:element name="id" type="xsd:string" minOccurs="0"/>				
 				<xsd:element name="issn" type="xsd:string" minOccurs="0"/>
 				<xsd:element name="eissn" type="xsd:string" minOccurs="0"/>
-				<xsd:element name="publicador" minOccurs="0">
+				<xsd:element name="editor" minOccurs="0">
 					<xsd:complexType>						
 						<xsd:all>
 							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
-							<xsd:element name="name" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
 						</xsd:all>
 					</xsd:complexType>
 				</xsd:element>			
-				<xsd:element name="oclnum" type="xsd:string" minOccurs="0"/>				
+				<xsd:element name="oclcnum" type="xsd:string" minOccurs="0"/>	
+				<xsd:element name="organizacionCorrespondiente" minOccurs="0">
+					<xsd:complexType>						
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>	
 			</xsd:all>
 		</xsd:complexType>
 	</xsd:element>

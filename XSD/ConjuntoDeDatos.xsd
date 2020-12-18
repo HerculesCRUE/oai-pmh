@@ -1,34 +1,15 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:element name = "Patente">
+	<xsd:element name = "ConjuntoDeDatos">
 		<xsd:complexType>
 			<xsd:all>
-				<xsd:element name="modalidad" type="xsd:string"  minOccurs="0"/>
-				<xsd:element name="identificador" type="xsd:string"  minOccurs="0"/>
-				<xsd:element name="editor" minOccurs="0">
-					<xsd:complexType>						
+				<xsd:element name="citadoComoFuenteDeDatos" minOccurs="0">
+					<xsd:complexType>
 						<xsd:all>
 							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
 							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
 						</xsd:all>
 					</xsd:complexType>
 				</xsd:element>
-				<xsd:element name="organizacionPropietaria" minOccurs="0">
-					<xsd:complexType>						
-						<xsd:all>
-							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
-							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
-						</xsd:all>
-					</xsd:complexType>
-				</xsd:element>
-				<xsd:element name="localizadoEn" minOccurs="0">
-					<xsd:complexType>						
-						<xsd:all>
-							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
-							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
-						</xsd:all>
-					</xsd:complexType>
-				</xsd:element>
-				<xsd:element name="fechaPublicacion" type="xsd:dateTime"  minOccurs="0"/>			
 				<xsd:element name="organizacionCorrespondiente" minOccurs="0">
 					<xsd:complexType>						
 						<xsd:all>

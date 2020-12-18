@@ -48,7 +48,8 @@ namespace OaiPmhNet.Models.OAIPMH
             SetContainer container = new SetContainer();
             IQueryable<Set> sets = _sets.AsQueryable().OrderBy(s => s.Name);
             int totalCount = sets.Count();
-            container.Sets = sets.Take(_configuration.PageSize);
+            //container.Sets = sets.Take(_configuration.PageSize);
+            container.Sets = sets;
             return container;
         }
     }

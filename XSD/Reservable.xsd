@@ -3,10 +3,17 @@
 		<xsd:complexType>
 			<xsd:all>
 				<xsd:element name="id" type="xsd:string" minOccurs="0"/>
-				<xsd:element name="titulo" type="xsd:string"  minOccurs="0"/>
+				<xsd:element name="titulo" type="xsd:string" minOccurs="1"/>
 				<xsd:element name="descripcion" type="xsd:string" minOccurs="0"/>
 				<xsd:element name="palabraClave" type="xsd:string" minOccurs="0"/>
-				<xsd:element name="intervaloDeTiempo" type="xsd:dateTime" minOccurs="0"/>
+				<xsd:element name="intervaloDeTiempo" minOccurs="1">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="fechaInicio" type="xsd:dateTime" minOccurs="0"/>
+							<xsd:element name="fechaFin" type="xsd:dateTime" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
 				<xsd:element name="infrastructuraDePersona" minOccurs="0">
 					<xsd:complexType>
 						<xsd:all>
