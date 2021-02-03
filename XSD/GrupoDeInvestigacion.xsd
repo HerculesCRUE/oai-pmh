@@ -12,8 +12,17 @@
 						</xsd:all>
 					</xsd:complexType>
 				</xsd:element>				
-				<xsd:element name="palabraClave" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="palabraClaveOrganizacion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="palabraClaveAgente" type="xsd:string" minOccurs="0"/>
 				<xsd:element name="organicacionSucesora" minOccurs="0"> 
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="nombre" type="xsd:string" minOccurs="0"/>
+						</xsd:all>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="organicacionPredecesora" minOccurs="0"> 
 					<xsd:complexType>
 						<xsd:all>
 							<xsd:element name="id" type="xsd:string" minOccurs="0"/>
