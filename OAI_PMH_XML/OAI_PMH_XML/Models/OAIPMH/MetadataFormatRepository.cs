@@ -19,9 +19,9 @@ namespace OaiPmhNet.Models.OAIPMH
         /// </summary>
         public MetadataFormatRepository()
         {
-            MetadataFormat xml = new MetadataFormat("XML", "", "", "");
+            MetadataFormat xml = new MetadataFormat("XML_ASIO", "", "", "");
             _dictionary = new Dictionary<string, MetadataFormat>();
-            _dictionary.Add("XML", xml);
+            _dictionary.Add("XML_ASIO", xml);
         }
 
         /// <summary>
