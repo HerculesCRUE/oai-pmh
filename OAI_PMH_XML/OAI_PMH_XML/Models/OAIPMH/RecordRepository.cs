@@ -153,7 +153,7 @@ namespace OaiPmhNet.Models.OAIPMH
 
             switch (pMetadataPrefix)
             {
-                case "XML":
+                case "XML_ASIO":
                     record.Metadata = new RecordMetadata()
                     {
                         Content = XElement.Parse(pXML.xml)
