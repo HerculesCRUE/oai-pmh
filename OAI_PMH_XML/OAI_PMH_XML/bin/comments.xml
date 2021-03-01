@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OAI_PMH_XML</name>
+    </assembly>
+    <members>
+        <member name="T:OAI_PMH.Controllers.OAI_PMHController">
+            <summary>
+            Controlador OAI-PMH 
+            </summary>
+        </member>
+        <member name="M:OAI_PMH.Controllers.OAI_PMHController.#ctor(OAI_PMH_XML.Models.Services.ConfigOAI_PMH_XML)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configOAI_PMH_XML">Configuración del servicio</param>
+        </member>
+        <member name="M:OAI_PMH.Controllers.OAI_PMHController.Get(OaiPmhNet.OaiVerb,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            API OAI-PMH para la recuperación de XML, más información del protocolo OAI-PMH visita https://www.openarchives.org/OAI/openarchivesprotocol.html
+            </summary>
+            <param name="verb">Verbo OAI-PMH</param>
+            <param name="identifier">Identificador de la entidad a recuperar (los identificadores se obtienen con el metodo ListIdentifiers)</param>
+            <param name="metadataPrefix">Especifica que los encabezados deben devolverse solo si el formato de metadatos que coincide con el metadataPrefix proporcionado está disponible o, según el soporte del repositorio para las eliminaciones, se ha eliminado. Los formatos de metadatos admitidos por un repositorio y para un elemento en particular se pueden recuperar mediante la solicitud ListMetadataFormats.</param>
+            <param name="from">Fecha de inicio desde la que se desean recuperar las cabeceras de las entidades (Codificado con ISO8601 y expresado en UTC, YYYY-MM-DD o YYYY-MM-DDThh:mm:ssZ)</param>
+            <param name="until">Fecha de fin hasta la que se desean recuperar las cabeceras de las entidades (Codificado con ISO8601 y expresado en UTC, YYYY-MM-DD o YYYY-MM-DDThh:mm:ssZ)</param>
+            <param name="set">Argumento con un valor setSpec, que especifica los criterios establecidos para la recolección selectiva. Los formatos de sets admitidos por un repositorio y para un elemento en particular se pueden recuperar mediante la solicitud ListSets.</param>
+            <param name="resumptionToken">Token de reanudación (No disponible)</param>
+            <returns></returns>
+        </member>
+        <member name="T:OaiPmhNet.Models.OAIPMH.MetadataFormatRepository">
+            <summary>
+            Implementación de IMetadataFormatRepository
+            </summary>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.MetadataFormatRepository.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.MetadataFormatRepository.GetMetadataFormat(System.String)">
+            <summary>
+            Obtiene un formato de metadatos a través de su prefijo
+            </summary>
+            <param name="prefix">Prefijo del MetadataFormat</param>
+            <returns>Formato de metadatos</returns>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.MetadataFormatRepository.GetMetadataFormats">
+            <summary>
+            Otbtiene un listada con todos los formatos de metadatos
+            </summary>
+            <returns>Formato de metadatos</returns>
+        </member>
+        <member name="T:OaiPmhNet.Models.OAIPMH.RecordRepository">
+            <summary>
+            Implementación de IRecordRepository
+            </summary>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.GetRecord(System.String,System.String)">
+            <summary>
+            Obtiene un Record OAI-PMH
+            </summary>
+            <param name="identifier">Identificador del record</param>
+            <param name="metadataPrefix">Prefijo del metadata</param>
+            <returns></returns>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.GetRecords(OaiPmhNet.Models.ArgumentContainer,OaiPmhNet.Models.IResumptionToken)">
+            <summary>
+            Obtiene los records del repositorio en función de los argumentos pasados
+            </summary>
+            <param name="arguments">Parámetros de la consulta</param>
+            <param name="resumptionToken">Token de reanudación</param>
+            <returns></returns>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.GetIdentifiers(OaiPmhNet.Models.ArgumentContainer,OaiPmhNet.Models.IResumptionToken)">
+            <summary>
+            Obtiene los identificadores del repositorio en función de los argumentos pasados
+            </summary>
+            <param name="arguments">Parámetros de la consulta</param>
+            <param name="resumptionToken">Token de reanudación</param>
+            <returns></returns>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.ToIdentifiersRecord(OaiPmhNet.Models.OAIPMH.XML)">
+            <summary>
+            Convierte un XML en un Record OAI-PMH sólo con cabecera
+            </summary>
+            <param name="pXML">XML</param>
+            <returns>Record OAI-PMH</returns>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.ToRecord(OaiPmhNet.Models.OAIPMH.XML,System.String)">
+            <summary>
+            Convierte un XML en un Record OAI-PMH completo
+            </summary>
+            <param name="pXML">XML</param>
+            <param name="pMetadataPrefix">Prefijo de metadatos</param>
+            <returns>Record OAI-PMH</returns>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.GetXMLFiles(System.String)">
+            <summary>
+            Obtiene las rutas de los XML
+            </summary>
+            <param name="set">Ruta del XML</param>
+            <returns>Rutas de los XML</returns>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.RecordRepository.GetXML(System.String)">
+            <summary>
+            Obtiene un XML
+            </summary>
+            <param name="pRoute">Ruta</param>
+            <returns></returns>
+        </member>
+        <member name="T:OaiPmhNet.Models.OAIPMH.SetRepository">
+            <summary>
+            Implementación de ISetRepository
+            </summary>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.SetRepository.#ctor(OaiPmhNet.IOaiConfiguration)">
+            <summary>
+            Cinstructor
+            </summary>
+            <param name="configuration">Configuración OAI-PMH</param>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.SetRepository.GetSets(OaiPmhNet.Models.ArgumentContainer,OaiPmhNet.Models.IResumptionToken)">
+            <summary>
+            Obtiene los sets del repositorio en función de los argumentos pasados
+            </summary>
+            <param name="arguments">Parámetros de la consulta</param>        
+            <param name="resumptionToken">Token de reanudación</param>
+            <returns></returns>
+        </member>
+        <member name="T:OaiPmhNet.Models.OAIPMH.XML">
+            <summary>
+            Objeto con la información correspondiente al XML
+            </summary>
+        </member>
+        <member name="M:OaiPmhNet.Models.OAIPMH.XML.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="pXML">XML</param>
+            <param name="pId">Identificador</param>
+            <param name="pSet">Set</param>
+        </member>
+        <member name="P:OaiPmhNet.Models.OAIPMH.XML.xml">
+            <summary>
+            XML del item
+            </summary>
+        </member>
+        <member name="P:OaiPmhNet.Models.OAIPMH.XML.Id">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:OaiPmhNet.Models.OAIPMH.XML.set">
+            <summary>
+            Set
+            </summary>
+        </member>
+    </members>
+</doc>
