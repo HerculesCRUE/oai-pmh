@@ -9,6 +9,7 @@ using OaiPmhNet.Models;
 using OaiPmhNet.Models.OAIPMH;
 using System;
 using System.IO;
+using System.Web;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -63,8 +64,7 @@ namespace OAI_PMH.Controllers
                 Uri baseUri = new Uri(_configOAI_PMH_XML.GetConfigUrl());
                 return baseUri.AbsoluteUri;
             };
-         
-
+            identifier = identifier.Replace(" ","+");
             //MetadataFormatRepository
             MetadataFormatRepository metadataFormatRepository = new MetadataFormatRepository();
 
